@@ -4,7 +4,7 @@ import cromanos
 
 class RomanNumberTest(unittest.TestCase):
     def setUp(self):
-        self.nr = cromanos.RomanNumber()
+        self.nr = cromanos.RomanNumber(25)
 
     def test_symbols_romans(self):
         self.assertEqual(self.nr.romano_a_entero('I'), 1)
@@ -19,7 +19,6 @@ class RomanNumberTest(unittest.TestCase):
         self.assertEqual(self.nr.romano_a_entero(''), 'Error en formato')
 
     def test_repetitions(self):
-
         self.assertEqual(self.nr.romano_a_entero('II'), 2)
         self.assertEqual(self.nr.romano_a_entero('MMM'), 3000)
         self.assertEqual(self.nr.romano_a_entero('KKK'), 'Error en formato')

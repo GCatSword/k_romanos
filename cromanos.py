@@ -15,6 +15,8 @@ class RomanNumber():
     }
 
     def __init__(self, valor):
+        self.value = valor
+        '''
         if isinstance(valor, str):
             self.value = self.romano_a_entero(valor)
             if self.value != 'Error en formato':
@@ -25,7 +27,7 @@ class RomanNumber():
         else:
             self.value = valor
             self.romanRepresentation = self.entero_a_romano()
-
+'''
     def __str__(self):
         return self.romanRepresentation
 
